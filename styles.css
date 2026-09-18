@@ -123,8 +123,8 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2
 
 /* ---------- Marquee ---------- */
 .marquee { background: var(--forest-900); overflow: hidden; padding: 14px 0; }
-.marquee-track { display: flex; gap: 28px; white-space: nowrap; width: max-content; animation: scroll-left 26s linear infinite; }
-.marquee-track span { color: rgba(255,255,255,.85); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.03em; text-transform: uppercase; }
+.marquee-track { display: flex; white-space: nowrap; width: max-content; animation: scroll-left 26s linear infinite; }
+.marquee-track span { color: rgba(255,255,255,.85); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.03em; text-transform: uppercase; margin-right: 28px; }
 .marquee-track span[aria-hidden] { color: var(--accent); }
 @keyframes scroll-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
