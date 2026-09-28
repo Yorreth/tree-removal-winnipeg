@@ -1,34 +1,13 @@
 (() => {
-  // ---------- Single source of truth for the phone number ----------
-  // Change the number here and it updates on every page that loads this
-  // file: header, footer, mobile bar, CTA banners, and JSON-LD schema.
-  const SITE_PHONE = {
-    display: '(204) 881-0634',
-    tel: '+12048810634',
-    schema: '+1-204-881-0634', // format used inside application/ld+json blocks
-  };
-
-  document.querySelectorAll('[data-phone-link]').forEach((el) => {
-    el.setAttribute('href', `tel:${SITE_PHONE.tel}`);
-  });
-  document.querySelectorAll('[data-phone-display]').forEach((el) => {
-    el.textContent = SITE_PHONE.display;
-  });
-  document.querySelectorAll('script[type="application/ld+json"]').forEach((el) => {
-    let data;
-    try {
-      data = JSON.parse(el.textContent);
-    } catch {
-      return;
-    }
-    const patchTelephone = (node) => {
-      if (!node || typeof node !== 'object') return;
-      if (typeof node.telephone === 'string') node.telephone = SITE_PHONE.schema;
-      Object.values(node).forEach(patchTelephone);
-    };
-    patchTelephone(data);
-    el.textContent = JSON.stringify(data);
-  });
+  // ---------- Phone number ----------
+  // The phone number is now the site's single source of truth, set once in
+  // _config.yml and built into every page's HTML (and JSON-LD) by Jekyll at
+  // build time. This used to be patched in here by JavaScript after page
+  // load with a hardcoded number — that was overwriting the real number on
+  // every single page view. Removed; nothing here needs to touch the phone
+  // number anymore. If a script elsewhere ever needs the number, read it
+  // from the already-rendered page instead of hardcoding it again:
+  //   document.querySelector('[data-phone-display]').textContent
 
   // Footer year
   const yearEl = document.getElementById('year');
@@ -167,7 +146,9 @@
       } catch (err) {
         console.error('Lead submission error:', err);
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Get My Free Quote'; }
-        alert(`Something went wrong sending your request. Please call ${SITE_PHONE.display} directly and we'll get you a quote right away.`);
+        const phoneEl = document.querySelector('[data-phone-display]');
+        const phoneText = phoneEl ? phoneEl.textContent : 'us';
+        alert(`Something went wrong sending your request. Please call ${phoneText} directly and we'll get you a quote right away.`);
       }
     });
   }
