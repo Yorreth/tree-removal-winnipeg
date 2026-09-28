@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en-CA">
 <head>
@@ -6,7 +8,7 @@
 <title>Tree Trimming Winnipeg: Mistakes to Avoid</title>
 <meta name="description" content="Winnipeg homeowners make costly tree trimming mistakes every season. Learn what to avoid, when to trim, and how local bylaws and climate affect your trees.">
 <link rel="canonical" href="https://treeremovalwinnipeg.ca/blog/tree-trimming-winnipeg.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231c3a28' d='M12 2 6 9h3l-4 6h4l-5 7h16l-5-7h4l-4-6h3z'/%3E%3C/svg%3E">
+<link rel="icon" href="{{ site.favicon_href }}">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,32 +30,7 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site-header" id="header">
-  <div class="container header-inner">
-    <a class="logo" href="../">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 6 9h3l-4 6h4l-5 7h16l-5-7h4l-4-6h3z"/><rect x="10" y="17" width="4" height="5"/></svg>
-      <span>Tree Removal Winnipeg</span>
-    </a>
-    <nav class="main-nav" id="main-nav" aria-label="Primary">
-      <a href="../#services">Services</a>
-      <a href="../#how-it-works">How It Works</a>
-      <a href="../#faq">FAQ</a>
-      <a href="./">Blog</a>
-    </nav>
-    <div class="header-actions">
-      <a class="phone-link" data-phone-link href="tel:+12048810634">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span data-phone-display>(204) 881-0634</span>
-      </a>
-      <a class="btn btn-primary btn-sm" href="../#quote">Get Free Quote</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
+{% include header.html %}
 
 <main id="main">
   <article class="article container">
@@ -143,35 +120,7 @@
   </article>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a class="logo" href="../">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 6 9h3l-4 6h4l-5 7h16l-5-7h4l-4-6h3z"/><rect x="10" y="17" width="4" height="5"/></svg>
-        <span>Tree Removal Winnipeg</span>
-      </a>
-      <p>Proudly connecting homeowners with independent, licensed professionals serving Winnipeg and surrounding areas.</p>
-    </div>
-    <nav class="footer-nav" aria-label="Footer">
-      <a href="../#services">Services</a>
-      <a href="../#how-it-works">How It Works</a>
-      <a href="../#faq">FAQ</a>
-      <a href="./">Blog</a>
-    </nav>
-    <div class="footer-contact">
-      <a class="phone-link on-dark" data-phone-link href="tel:+12048810634"><span data-phone-display>(204) 881-0634</span></a>
-      <a href="../#quote">Get a Free Quote &rarr;</a>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <p>&copy; <span id="year"></span> Tree Removal Winnipeg. This is a lead-generation service, not a licensed contractor &mdash; all work is performed by independent local crews.</p>
-  </div>
-</footer>
-
-<div class="mobile-cta-bar">
-  <a class="btn btn-ghost" data-phone-link href="tel:+12048810634">Call Now</a>
-  <a class="btn btn-primary" href="../#quote">Free Quote</a>
-</div>
+{% include footer.html %}
 
 <script src="../script.js"></script>
 </body>

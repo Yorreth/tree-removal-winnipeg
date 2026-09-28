@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="/">
+        <svg viewBox="0 0 24 24" aria-hidden="true">{{ site.logo_icon_svg }}</svg>
+        <span>{{ site.business_name_html }}</span>
+      </a>
+      <p>Proudly connecting homeowners with independent, licensed tree care professionals serving Winnipeg, St. Vital, St. James, Transcona, East Kildonan, River Heights &amp; surrounding areas.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#services">Services</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms</a>
+    </nav>
+    <div class="footer-contact">
+      <a class="phone-link on-dark" data-phone-link href="tel:{{ site.phone_tel }}"><span data-phone-display>{{ site.phone_display }}</span></a>
+      <a href="/#quote">Get a Free Quote &rarr;</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> {{ site.business_name }}. This is a lead-generation service, not a licensed contractor &mdash; all work is performed by independent local crews.</p>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar">
+  <a class="btn btn-ghost" data-phone-link href="tel:{{ site.phone_tel }}">Call Now</a>
+  <a class="btn btn-primary" href="/#quote">Free Quote</a>
+</div>
